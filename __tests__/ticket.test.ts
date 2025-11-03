@@ -95,24 +95,40 @@ describe('Ticket Management', () => {
    * 2. Verify pricing is correct for each type
    *
    * Expected Results:
-   * - General tickets: $50.00 (5000 cents)
-   * - VIP tickets: $150.00 (15000 cents)
-   * - Student tickets: $25.00 (2500 cents)
+   * - All Access tickets: $50.00 (5000 cents)
+   * - Core tickets: $15.00 (1500 cents)
+   * - Exhibitor tickets: $25.00 (2500 cents)
+   * - Speaker tickets: $30.00 (3000 cents)
+   * - Vendor tickets: $20.00 (2000 cents)
+   * - Event Organizer tickets: $75.00 (7500 cents)
+   * - Administrator tickets: $100.00 (10000 cents)
    */
   it('should calculate correct prices for ticket types', () => {
     const prices = {
-      general: 5000,
-      vip: 15000,
-      student: 2500
+      allAccess: 5000,
+      core: 1500,
+      exhibitor: 2500,
+      speaker: 3000,
+      vendor: 2000,
+      eventOrganizer: 7500,
+      administrator: 10000
     };
 
-    const generalTicket = createTicket('event-1', 'user-1', 'general', prices.general);
-    const vipTicket = createTicket('event-1', 'user-2', 'vip', prices.vip);
-    const studentTicket = createTicket('event-1', 'user-3', 'student', prices.student);
+    const allAccessTicket = createTicket('event-1', 'user-1', 'allAccess', prices.allAccess);
+    const coreTicket = createTicket('event-1', 'user-2', 'core', prices.core);
+    const exhibitorTicket = createTicket('event-1', 'user-3', 'exhibitor', prices.exhibitor);
+    const speakerTicket = createTicket('event-1', 'user-4', 'speaker', prices.speaker);
+    const vendorTicket = createTicket('event-1', 'user-5', 'vendor', prices.vendor);
+    const eventOrganizerTicket = createTicket('event-1', 'user-6', 'eventOrganizer', prices.eventOrganizer);
+    const administratorTicket = createTicket('event-1', 'user-7', 'administrator', prices.administrator);
 
-    expect(generalTicket.price).toBe(5000);
-    expect(vipTicket.price).toBe(15000);
-    expect(studentTicket.price).toBe(2500);
+    expect(allAccessTicket.price).toBe(5000);
+    expect(coreTicket.price).toBe(1500);
+    expect(exhibitorTicket.price).toBe(2500);
+    expect(speakerTicket.price).toBe(3000);
+    expect(vendorTicket.price).toBe(2000);
+    expect(eventOrganizerTicket.price).toBe(7500);
+    expect(administratorTicket.price).toBe(10000);
   });
 });
 
