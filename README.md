@@ -2,7 +2,7 @@
 
 A comprehensive mockup website of the Games Developers Conference 2026 event management platform built with Next.js 16, TypeScript, and Supabase.
 
-## 🎥 Demo Videos
+## Demo Videos
 
 See the platform in action from different user perspectives:
 
@@ -10,7 +10,7 @@ See the platform in action from different user perspectives:
 - [**Attendee's Perspective**](https://youtu.be/tF9IZpIMXIU) - Event browsing, registration, and ticket management
 - [**Event Organizer's Perspective**](https://youtu.be/jRlprlYoKTg) - Event creation and management
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -87,11 +87,8 @@ Create a `.env.local` file in the root directory:
 ```bash
 # Supabase Configuration
 NEXT_PUBLIC_SUPABASE_URL=https://kjlineyenvpzioinskcq.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-
-# Required for admin operations (deleting users)
-# Get this from your Supabase project settings > API > service_role key
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
+NEXT_PUBLIC_SUPABASE_ANON_KEY=let me know if you need this
+SUPABASE_SERVICE_ROLE_KEY=let me know if you need this
 ```
 
 **Important**: Contact **ME** for the Supabase API keys. The database is already set up and hosted remotely on Supabase, so you don't need to create your own database.
@@ -102,11 +99,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 npm run dev
 ```
 
-The application will start on [http://localhost:3000](http://localhost:3000).
-
-### Step 5: Access the Application
-
-Open your browser and navigate to `http://localhost:3000`. You should see the landing page with **Signup** and **Login** buttons.
+The application will run on [http://localhost:3000](http://localhost:3000).
 
 ## Dependencies
 
